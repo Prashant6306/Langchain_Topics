@@ -13,11 +13,12 @@ while True:
 
     # ① Add user message to history
     dialogue_log.append(user_text)
+    print("test1->",dialogue_log)
 
     # ② Send ENTIRE history to LLM
     reply = bot.invoke(dialogue_log)
 
     # ③ Store AI response in history
     dialogue_log.append(reply.content)
-
+    print("test1->",dialogue_log)
     print(f"AI: {reply.content}")

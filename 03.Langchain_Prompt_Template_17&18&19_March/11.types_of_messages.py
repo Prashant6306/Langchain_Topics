@@ -11,9 +11,9 @@ ai_bot = ChatOpenAI()
 # Build an initial conversation with context
 dialogue = [
     SystemMessage(content="You are a helpful AI tutor"),
-    HumanMessage(content="Tell me about LangChain"),
-    AIMessage(content="LangChain is a framework for "
-              "building LLM-powered applications..."),
+    HumanMessage(content="Tell me about LangGraph"),
+    AIMessage(content="LangGraph is a framework for "
+              "building LLM-powered agentic AI applications..."),
     HumanMessage(content="What are its key features?"),
 ]
 
@@ -24,3 +24,4 @@ response = ai_bot.invoke(dialogue)
 dialogue.append(AIMessage(content=response.content))
 
 print(dialogue)   # All messages properly labelled!
+
